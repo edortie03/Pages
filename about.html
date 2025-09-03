@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"  />
+    <style>
+       
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0a1429, #0b2a6f 45%, #0d47a1);
+            min-height: 100vh;
+            color: #0f172a; /* slate-900 */
+        }
+        .navbar { background: linear-gradient(to right, #0b1e3a, #0a1a33); border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+        .navbar-brand { color: #0d6efd; }
+        .navbar-brand:hover { color: #0b5ed7; }
+        .nav-link { color: #cbd5e1; }
+        .nav-link:hover, .nav-link.active { color: #93c5fd; }
+
+        /* Cards/blocks */
+        .surface-card { background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 12px; backdrop-filter: blur(10px) saturate(140%); -webkit-backdrop-filter: blur(10px) saturate(140%); box-shadow: 0 8px 32px rgba(0,0,0,0.25); }
+        .shadow-hover { transition: transform .25s ease, box-shadow .25s ease; }
+        .shadow-hover:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,.1); }
+
+        /* Section titles */
+        .section-title { color: #e5e7eb; }
+        .section-subtitle { color: #cbd5e1; }
+
+        /* Team */
+        .team-card { border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 12px; overflow: hidden; background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(10px) saturate(140%); -webkit-backdrop-filter: blur(10px) saturate(140%); box-shadow: 0 8px 32px rgba(0,0,0,0.25); }
+        .team-img { height: 200px; object-fit: cover; width: 100%; }
+        .surface-card .section-title { color: #e5e7eb; }
+        .section-subtitle { color: #cbd5e1; }
+        .about-text { color: #e2e8f0; }
+
+        /* Footer */
+        footer { background: linear-gradient(to right, #0f172a, #111827); }
+        footer h5 { color: #ffffff; }
+        footer p, footer a { color: #cbd5e1; }
+        footer a:hover { color: #0d6efd; }
+        .social-icons a { font-size: 1.5rem; margin-right: 15px; color: #cbd5e1; transition: color 0.3s ease; }
+        .social-icons a:hover { color: #0d6efd; }
+
+        /* Buttons */
+        .btn-primary { background: linear-gradient(to right, #0d6efd, #0b5ed7); border: none; }
+        .btn-primary:hover { background: linear-gradient(to right, #0b5ed7, #0949a6); }
+        .btn-contact { background: linear-gradient(to right, #10b981, #059669); border: none; color: #ffffff; }
+        .btn-contact:hover { background: linear-gradient(to right, #059669, #047857); color: #ffffff; }
+
+        /* Contrast overrides for titles within glass cards */
+        .surface-card .section-title { color: #e5e7eb; }
+        .team-card h5 { color: #e5e7eb; }
+        .team-card .text-secondary, .surface-card .text-secondary { color: #cbd5e1 !important; }
+        .surface-card a { color: #93c5fd; }
+        .surface-card a:hover { color: #bfdbfe; }
+    </style>
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav class="navbar navbar-expand-lg shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="home.html">Edortify</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <!-- Search Bar -->
+                <div class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search products..." aria-label="Search">
+                    <button class="btn btn-primary" type="button">Search</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <!-- About Block -->
+        <section class="surface-card p-4 p-md-5 mb-4">
+            <h1 class="section-title fw-bold mb-3">About Edortify</h1>
+            <p class="about-text">Edortify was founded in 2024 with a vision to revolutionize the online shopping experience. Based in the heart of the tech industry, our company has grown from a small startup to a trusted e-commerce platform, serving customers worldwide. We specialize in offering a curated selection of electronics, accessories, and gadgets, each chosen for its quality, innovation, and value.</p>
+            <p class="about-text"><strong>Core values: </strong>Customer satisfaction, integrity, and innovation drive everything we do. Over the years, we've partnered with top brands to bring cutting-edge products to our customers, earning recognition for our exceptional service and reliable delivery. At Edortify, we’re not just about selling products; we’re about creating lasting connections with our customers through trust, transparency, and a passion for excellence.</p>
+            <p class="about-text mb-0">With a dedicated team and a commitment to sustainability, we strive to make a positive impact in the e-commerce industry. From eco-friendly packaging to seamless customer support, Edortify is here to make your shopping experience effortless and enjoyable.</p>
+        </section>
+
+        <!-- Mission Block -->
+        <section class="surface-card p-4 p-md-5 mb-4">
+            <h2 class="section-title fw-bold mb-3">Our Mission</h2>
+            <p class="about-text mb-0">Our mission is to redefine e-commerce by offering a customer-centric platform that prioritizes quality, trust, and innovation. We strive to deliver products that enhance your lifestyle while ensuring a hassle-free shopping experience with fast shipping, secure payments, and outstanding customer support.</p>
+        </section>
+
+        <!-- Team -->
+        <section>
+            <h2 class="section-title fw-bold mb-3 text-center">Meet Our Team</h2>
+            <p class="section-subtitle text-center mb-4">People who make it happen</p>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="team-card shadow-hover h-100">
+                        <img src="images/intro/t1.jpg" class="team-img" alt="Team Member Jane Doe" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/800x400?text=Team+1';">
+                        <div class="p-3 text-center">
+                            <h5 class="mb-1">Edward Denis</h5>
+                            <div class="text-secondary">Founder & CEO</div>
+                            <p class="about-text mb-0 mt-2">Edward leads Edortify with a vision for innovation and customer satisfaction.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="team-card shadow-hover h-100">
+                        <img src="images/intro/t1.JPG" class="team-img" alt="Team Member John Smith" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/800x400?text=Team+2';">
+                        <div class="p-3 text-center">
+                            <h5 class="mb-1">John Smith</h5>
+                            <div class="text-secondary">Head of Operations</div>
+                            <p class="about-text mb-0 mt-2">John ensures our logistics and operations run smoothly every day.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="team-card shadow-hover h-100">
+                        <img src="images/intro/t1.jpg" class="team-img" alt="Team Member Emily Brown" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/800x400?text=Team+3';">
+                        <div class="p-3 text-center">
+                            <h5 class="mb-1">Emily Brown</h5>
+                            <div class="text-secondary">Customer Support Lead</div>
+                            <p class="about-text mb-0 mt-2">Emily is dedicated to providing top-notch support to our customers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Info -->
+        <section class="surface-card p-4 p-md-5 mt-4">
+            <h2 class="section-title fw-bold mb-3">Contact Us</h2>
+            <p class="about-text">Have questions or need assistance? Our team is here to help you every step of the way. Reach out to us through any of the following channels:</p>
+            <ul class="about-text list-unstyled mb-3">
+                <li><strong>Email:</strong> edorward.21@gmail.com</li>
+                <li><strong>Phone:</strong> +255 747 610 946</li>
+                <li><strong>Address:</strong> Chanika, Dsm, Tanzania</li>
+                <li><strong>Operating Hours:</strong> Monday - Sunday, 9:00 AM - 6:00 PM (EAT)</li>
+            </ul>
+            <a href="contact.html" class="btn btn-contact">Get in Touch</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 class="fw-bold">Edortify</h5>
+                    <p>Your one-stop shop for all your needs. Quality products, great prices!</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="home.html" class="text-decoration-none">Home</a></li>
+                        <li><a href="about.html" class="text-decoration-none">About Us</a></li>
+                        <li><a href="contact.html" class="text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold">Contact Us</h5>
+                    <p><a href="edorward.21@gmail.com" class="text-decoration-none">edorward.21@gmail.com</a></p>
+                    <p>Phone: +255 747 610 946</p>
+                    <p>Address: Chanika, Dsm, Tanzania</p>
+                    <p>Hours: Mon-Sun, 9:00 AM - 6:00 PM (EAT)</p>
+                    <div class="social-icons mt-3">
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>&copy; 2025 Edortify. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
